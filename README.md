@@ -67,14 +67,35 @@ Xcodeでプロジェクトを開いて、各ファイルのTarget Membershipを�
 - `Date+Extensions.swift`
 - `Color+Extensions.swift`
 
-### 3. ビルド設定
+### 3. App Icon設定
+
+App Store Connect validation用に以下のアイコンサイズが必要です：
+
+#### 必要なアイコンファイル
+以下のPNGファイルを`Assets.xcassets/AppIcon.appiconset/`に追加：
+
+- `AppIcon-60@2x.png` (120x120px) - iPhone用
+- `AppIcon-60@3x.png` (180x180px) - iPhone用
+- `AppIcon-76.png` (76x76px) - iPad用
+- `AppIcon-76@2x.png` (152x152px) - iPad用  
+- `AppIcon-83.5@2x.png` (167x167px) - iPad Pro用
+- `AppIcon-1024.png` (1024x1024px) - App Store用
+
+#### Info.plist設定
+`Info.plist`に以下を追加済み：
+```xml
+<key>CFBundleIconName</key>
+<string>AppIcon</string>
+```
+
+### 4. ビルド設定
 
 1. **Deployment Target**: iOS 17.0
 2. **Swift Version**: Swift 5
 3. **Bundle Identifiers**: 上記の通り設定
 4. **Code Signing**: 開発者アカウントで設定
 
-### 4. 実行・テスト
+### 5. 実行・テスト
 
 1. **ビルド**: ⌘ + B
 2. **実行**: ⌘ + R
