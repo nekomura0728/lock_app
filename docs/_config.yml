@@ -1,0 +1,36 @@
+# GitHub Pages configuration for あと何日
+title: あと何日：ロック画面でカウントダウン
+description: ロック画面で残り日数を常時表示する軽量カウントダウンアプリ
+url: https://nekomura0728.github.io/lock_app
+baseurl: ""
+
+# Theme
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# SEO
+lang: ja
+author:
+  name: nekomura
+  email: nekomura@liz-aria.com
+
+# Social media
+social_links:
+  - https://github.com/nekomura0728
+
+# Google Analytics (if needed in future)
+# google_analytics: G-XXXXXXXXXX

@@ -1,0 +1,125 @@
+/* Event List */
+"Events" = "Events";
+"Settings" = "Settings";
+"Add Event" = "Add Event";
+"Loading..." = "Loading...";
+"No events yet" = "No events yet";
+"Create your first event" = "Create your first event";
+"How to add widgets" = "How to add widgets";
+"Add your widget to home screen to see countdown" = "Add your widget to home screen to see countdown";
+
+/* Event Edit */
+"New Event" = "New Event";
+"Edit Event" = "Edit Event";
+"Event Title" = "Event Title";
+"Enter title..." = "Enter title...";
+"Date & Time" = "Date & Time";
+"All Day" = "All Day";
+"Color" = "Color";
+"Emoji" = "Emoji";
+"Save" = "Save";
+"Cancel" = "Cancel";
+"Delete" = "Delete";
+
+/* Countdown */
+"remaining %d days" = "remaining %d days";
+"remaining %d hours" = "remaining %d hours";
+"remaining %d minutes" = "remaining %d minutes";
+"remaining %d seconds" = "remaining %d seconds";
+"completed" = "completed";
+"elapsed %d days" = "elapsed %d days";
+"elapsed %d hours" = "elapsed %d hours";
+
+/* Settings */
+"General" = "General";
+"Notifications" = "Notifications";
+"Event Management" = "Event Management";
+"Post Due Display" = "Post Due Display";
+"Auto Selection" = "Auto Selection";
+"Help" = "Help";
+"Widget Guide" = "Widget Guide";
+"Terms of Service" = "Terms of Service";
+"Privacy Policy" = "Privacy Policy";
+"Version" = "Version";
+"Done" = "Done";
+
+/* Pro/Paywall */
+"Pro" = "Pro";
+"Free Version" = "Free Version";
+"Up to 1 event" = "Up to 1 event";
+"All features available" = "All features available";
+"Upgrade to Pro" = "Upgrade to Pro";
+"Restore Purchase" = "Restore Purchase";
+"Multiple Events" = "Multiple Events";
+"Create 2 or more events" = "Create 2 or more events";
+"Widget Dual Display" = "Widget Dual Display";
+"Show multiple events on home screen" = "Show multiple events on home screen";
+"One-time Purchase" = "One-time Purchase";
+"Use forever with single purchase" = "Use forever with single purchase";
+"Purchase Pro for %@" = "Purchase Pro for %@";
+"Purchase Pro" = "Purchase Pro";
+"One-time purchase (forever)" = "One-time purchase (forever)";
+"Pay once, use forever. Charged to your iTunes account." = "Pay once, use forever. Charged to your iTunes account.";
+
+/* Notifications */
+"Notification Settings" = "Notification Settings";
+"Allow notifications to receive event reminders." = "Allow notifications to receive event reminders.";
+"Notification Status" = "Notification Status";
+"Notifications enabled" = "Notifications enabled";
+"Notifications denied" = "Notifications denied";
+"Authorization required" = "Authorization required";
+"Allow" = "Allow";
+"Notification Timing" = "Notification Timing";
+"We send optimal notifications based on event type." = "We send optimal notifications based on event type.";
+"1 day before" = "1 day before";
+"1 hour before" = "1 hour before";
+"Morning notification" = "Morning notification";
+"Time-specific events only" = "Time-specific events only";
+"All-day events only" = "All-day events only";
+"Test Notification" = "Test Notification";
+"Sends test notification in 5 seconds." = "Sends test notification in 5 seconds.";
+
+/* Widget Guide */
+"How to Add Widgets" = "How to Add Widgets";
+"Long press home screen" = "Long press home screen";
+"Long press until app icons start wiggling." = "Long press until app icons start wiggling.";
+"Tap '+' button" = "Tap '+' button";
+"Tap the '+' button in top-left corner." = "Tap the '+' button in top-left corner.";
+"Search for 'CDWidget'" = "Search for 'CDWidget'";
+"Select 'CDWidget' from widget list." = "Select 'CDWidget' from widget list.";
+"Choose size" = "Choose size";
+"Select your preferred size: Small, Medium, or Large." = "Select your preferred size: Small, Medium, or Large.";
+"Add Widget" = "Add Widget";
+"Tap 'Add Widget' to complete." = "Tap 'Add Widget' to complete.";
+
+/* Errors */
+"Error" = "Error";
+"OK" = "OK";
+"Free version allows up to 1 event. Please upgrade to Pro." = "Free version allows up to 1 event. Please upgrade to Pro.";
+"Event not found" = "Event not found";
+"Failed to duplicate event" = "Failed to duplicate event";
+"Product not found" = "Product not found";
+"Purchase failed: %@" = "Purchase failed: %@";
+"Restore failed: %@" = "Restore failed: %@";
+
+/* Widget */
+"No events" = "No events";
+"Please create an event" = "Please create an event";
+
+/* Notification Content */
+"Tomorrow is your event!" = "Tomorrow is your event!";
+"%@ %@ is tomorrow" = "%@ %@ is tomorrow";
+"Event starting soon!" = "Event starting soon!";
+"%@ %@ starts in 1 hour" = "%@ %@ starts in 1 hour";
+"Today is your event!" = "Today is your event!";
+"Today is %@ %@" = "Today is %@ %@";
+"CDWidget Test Notification" = "CDWidget Test Notification";
+"Notifications are working properly!" = "Notifications are working properly!";
+
+/* Post Due Display Policies */
+"Completed" = "Completed";
+"Show Elapsed" = "Show Elapsed";
+
+/* Widget Select Policies */
+"Nearest" = "Nearest";
+"Manual" = "Manual";

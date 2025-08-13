@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-ja="あと何日：ロック画面でカウントダウン - サポート" data-en="Days Left: Countdown Widget - Support">あと何日：ロック画面でカウントダウン - サポート</title>
+    <meta name="description" data-ja="あと何日（ロック画面でカウントダウン）のサポートページ。お問い合わせ、よくある質問、プライバシーポリシーをご案内します。" data-en="Days Left (Countdown Widget) support page. Contact information, FAQ, and privacy policy." content="あと何日（ロック画面でカウントダウン）のサポートページ。お問い合わせ、よくある質問、プライバシーポリシーをご案内します。">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="あと何日：ロック画面でカウントダウン - サポート">
+    <meta property="og:description" content="ロック画面で残り日数を常時表示する軽量カウントダウンアプリ">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nekomura0728.github.io/lock_app/support.html">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 8px 16px;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .language-switch a {
+            text-decoration: none;
+            color: #007AFF;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 4px 16px rgba(0, 122, 255, 0.3);
+        }
+
+        .app-title {
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .app-subtitle {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid #007AFF;
+            padding-bottom: 10px;
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: linear-gradient(45deg, #007AFF, #5856D6);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1em;
+            margin: 20px 0;
+            transition: transform 0.2s ease;
+        }
+
+        .contact-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 122, 255, 0.3);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .faq-answer {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(45deg, #E3F2FD, #F3E5F5);
+            border-left: 4px solid #007AFF;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .privacy-summary {
+            background: linear-gradient(45deg, #4CAF50, #45A049);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .pricing-info {
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            color: white;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .price {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-link {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            margin: 0 10px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header, .section {
+                padding: 20px;
+                border-radius: 16px;
+            }
+            
+            .app-title {
+                font-size: 1.8em;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .language-switch {
+                top: 10px;
+                right: 10px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <a href="#" onclick="switchLanguage('ja')" id="lang-ja">日本語</a>
+        |
+        <a href="#" onclick="switchLanguage('en')" id="lang-en">English</a>
+    </div>
+
+    <div class="container">
+        <!-- Navigation -->
+        <div class="nav-links">
+            <a href="index.html" class="nav-link" data-ja="メインページ" data-en="Main Page">メインページ</a>
+            <a href="#contact" class="nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+            <a href="#privacy" class="nav-link" data-ja="プライバシー" data-en="Privacy">プライバシー</a>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <div class="app-icon">⏰</div>
+            <h1 class="app-title" data-ja="あと何日" data-en="Days Left">あと何日</h1>
+            <p class="app-subtitle" data-ja="ロック画面でカウントダウン" data-en="Countdown Widget">ロック画面でカウントダウン</p>
+            <p data-ja="締切・イベントを"考えずに"忘れない。ロック画面とホーム画面のウィジェットで残り時間が常時見える超軽量カウントダウンアプリです。" data-en="Never forget deadlines and events. This ultra-lightweight countdown app displays remaining time on your lock screen and home screen widgets without opening the app.">
+                締切・イベントを"考えずに"忘れない。ロック画面とホーム画面のウィジェットで残り時間が常時見える超軽量カウントダウンアプリです。
+            </p>
+        </div>
+
+        <!-- App Features -->
+        <div class="section">
+            <h2 class="section-title" data-ja="主な機能" data-en="Key Features">主な機能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title" data-ja="ロック画面ウィジェット" data-en="Lock Screen Widget">ロック画面ウィジェット</h3>
+                    <p class="feature-description" data-ja="Inline/Circular/Rectangular形式でロック画面に表示" data-en="Display on lock screen in Inline/Circular/Rectangular formats">Inline/Circular/Rectangular形式でロック画面に表示</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3 class="feature-title" data-ja="ホーム画面ウィジェット" data-en="Home Screen Widget">ホーム画面ウィジェット</h3>
+                    <p class="feature-description" data-ja="Small/Medium形式でホーム画面に表示" data-en="Display on home screen in Small/Medium formats">Small/Medium形式でホーム画面に表示</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title" data-ja="プッシュ通知" data-en="Push Notifications">プッシュ通知</h3>
+                    <p class="feature-description" data-ja="1日前/1時間前/当日朝に自動通知" data-en="Automatic notifications 1 day before/1 hour before/morning of event">1日前/1時間前/当日朝に自動通知</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title" data-ja="完全プライベート" data-en="Complete Privacy">完全プライベート</h3>
+                    <p class="feature-description" data-ja="端末内データのみ、サーバー不要" data-en="Device-only data, no server required">端末内データのみ、サーバー不要</p>
+                </div>
+            </div>
+            
+            <div class="pricing-info">
+                <div class="price" data-ja="¥300 買い切り" data-en="¥300 One-time Purchase">¥300 買い切り</div>
+                <p data-ja="無料版: 1件まで | Pro版: 無制限作成（広告なし）" data-en="Free: Up to 1 event | Pro: Unlimited events (No ads)">無料版: 1件まで | Pro版: 無制限作成（広告なし）</p>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section">
+            <h2 class="section-title" data-ja="よくある質問" data-en="Frequently Asked Questions">よくある質問</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="Q. ウィジェットを追加するにはどうすればよいですか？" data-en="Q. How do I add a widget?">Q. ウィジェットを追加するにはどうすればよいですか？</h3>
+                <p class="faq-answer" data-ja="ロック画面またはホーム画面を長押しし、「+」ボタンをタップして「あと何日」を検索してください。お好みのサイズを選択して追加できます。" data-en="Long press on the lock screen or home screen, tap the '+' button and search for 'Days Left'. You can select your preferred size and add it.">
+                    ロック画面またはホーム画面を長押しし、「+」ボタンをタップして「あと何日」を検索してください。お好みのサイズを選択して追加できます。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="Q. 無料版とPro版の違いは何ですか？" data-en="Q. What's the difference between Free and Pro versions?">Q. 無料版とPro版の違いは何ですか？</h3>
+                <p class="faq-answer" data-ja="無料版では1件のイベントまで作成できます。Pro版（¥300買い切り）では無制限にイベントを作成でき、広告も表示されません。" data-en="The free version allows you to create up to 1 event. The Pro version (¥300 one-time purchase) allows unlimited events and has no ads.">
+                    無料版では1件のイベントまで作成できます。Pro版（¥300買い切り）では無制限にイベントを作成でき、広告も表示されません。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="Q. 通知が届かない場合はどうすればよいですか？" data-en="Q. What should I do if notifications don't arrive?">Q. 通知が届かない場合はどうすればよいですか？</h3>
+                <p class="faq-answer" data-ja="設定→通知→あと何日で通知が有効になっているか確認してください。また、おやすみモードや集中モードが影響している場合があります。" data-en="Check that notifications are enabled in Settings → Notifications → Days Left. Also, Do Not Disturb or Focus modes may affect notifications.">
+                    設定→通知→あと何日で通知が有効になっているか確認してください。また、おやすみモードや集中モードが影響している場合があります。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="Q. ウィジェットが更新されない場合はどうすればよいですか？" data-en="Q. What should I do if the widget doesn't update?">Q. ウィジェットが更新されない場合はどうすればよいですか？</h3>
+                <p class="faq-answer" data-ja="ウィジェットは1時間ごとに自動更新されます。手動で更新したい場合は、アプリを開いてイベントを確認してください。" data-en="Widgets automatically update every hour. If you want to update manually, open the app and check your events.">
+                    ウィジェットは1時間ごとに自動更新されます。手動で更新したい場合は、アプリを開いてイベントを確認してください。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="Q. 対応iOSバージョンを教えてください" data-en="Q. What iOS versions are supported?">Q. 対応iOSバージョンを教えてください</h3>
+                <p class="faq-answer" data-ja="iOS 17.0以降に対応しています。ロック画面ウィジェット機能を使用するため、最新のiOSが必要です。" data-en="iOS 17.0 or later is supported. The latest iOS is required to use lock screen widget features.">
+                    iOS 17.0以降に対応しています。ロック画面ウィジェット機能を使用するため、最新のiOSが必要です。
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <h2 class="section-title" data-ja="お問い合わせ" data-en="Contact Us">お問い合わせ</h2>
+            <div class="contact-info">
+                <p data-ja="ご質問、ご要望、不具合報告などがございましたら、お気軽にお問い合わせください。" data-en="Please feel free to contact us with any questions, requests, or bug reports.">
+                    ご質問、ご要望、不具合報告などがございましたら、お気軽にお問い合わせください。
+                </p>
+                <a href="mailto:nekomura@liz-aria.com?subject=あと何日%20サポート" class="contact-email">nekomura@liz-aria.com</a>
+                <p data-ja="通常24時間以内にご返信いたします。" data-en="We usually reply within 24 hours.">通常24時間以内にご返信いたします。</p>
+                
+                <div class="highlight" style="margin-top: 30px;">
+                    <h3 data-ja="不具合報告の際にご提供いただきたい情報" data-en="Information to provide when reporting bugs">不具合報告の際にご提供いただきたい情報</h3>
+                    <ul style="text-align: left;">
+                        <li data-ja="iOSバージョン" data-en="iOS version">iOSバージョン</li>
+                        <li data-ja="デバイス機種" data-en="Device model">デバイス機種</li>
+                        <li data-ja="発生状況の詳細" data-en="Detailed situation description">発生状況の詳細</li>
+                        <li data-ja="スクリーンショット（可能であれば）" data-en="Screenshots (if possible)">スクリーンショット（可能であれば）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div class="section" id="privacy">
+            <h2 class="section-title" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</h2>
+            
+            <div class="privacy-summary">
+                <h3 style="margin-bottom: 15px;" data-ja="🛡️ プライバシー保護の約束" data-en="🛡️ Privacy Protection Promise">🛡️ プライバシー保護の約束</h3>
+                <p data-ja="あと何日は個人データを一切収集せず、すべての情報は端末内にのみ保存されます。サーバーへのデータ送信、第三者との共有は行いません。" data-en="Days Left does not collect any personal data. All information is stored only on your device. No data is sent to servers or shared with third parties.">
+                    あと何日は個人データを一切収集せず、すべての情報は端末内にのみ保存されます。サーバーへのデータ送信、第三者との共有は行いません。
+                </p>
+            </div>
+            
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="データの収集について" data-en="Data Collection">データの収集について</h3>
+                <div class="highlight">
+                    <strong data-ja="重要:" data-en="Important:">重要:</strong> <span data-ja="あと何日は個人を特定できる情報を一切収集しません。" data-en="Days Left does not collect any personally identifiable information.">あと何日は個人を特定できる情報を一切収集しません。</span>
+                </div>
+                <p class="faq-answer" data-ja="すべてのデータ（イベントデータ、設定）はお客様の端末内にのみ保存されます。個人識別情報、位置情報、使用状況データ、広告識別子などは一切収集いたしません。" data-en="All data (event data, settings) is stored only on your device. We do not collect personal identification information, location data, usage data, advertising identifiers, etc.">
+                    すべてのデータ（イベントデータ、設定）はお客様の端末内にのみ保存されます。個人識別情報、位置情報、使用状況データ、広告識別子などは一切収集いたしません。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="データの使用について" data-en="Data Usage">データの使用について</h3>
+                <p class="faq-answer" data-ja="端末内に保存されるデータは、カウントダウンウィジェットの表示、通知の送信、アプリ設定の保持、Pro機能の提供のためのみ使用されます。これらのデータがアプリ外で使用されることは一切ありません。" data-en="Data stored on your device is used only for displaying countdown widgets, sending notifications, maintaining app settings, and providing Pro features. This data is never used outside the app.">
+                    端末内に保存されるデータは、カウントダウンウィジェットの表示、通知の送信、アプリ設定の保持、Pro機能の提供のためのみ使用されます。これらのデータがアプリ外で使用されることは一切ありません。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="第三者との共有について" data-en="Third-party Sharing">第三者との共有について</h3>
+                <p class="faq-answer" data-ja="お客様のデータを第三者と共有することは一切ありません。データの送信、分析、広告配信などは行いません。政府機関へのデータ提供も、データを保有していないため不可能です。" data-en="We never share your data with third parties. We do not perform data transmission, analytics, or ad serving. We cannot provide data to government agencies because we don't possess any data.">
+                    お客様のデータを第三者と共有することは一切ありません。データの送信、分析、広告配信などは行いません。政府機関へのデータ提供も、データを保有していないため不可能です。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="課金情報について" data-en="Billing Information">課金情報について</h3>
+                <p class="faq-answer" data-ja="Pro版の購入はAppleのApp Store決済システムを通じて行われます。課金情報はAppleが管理し、当アプリには保存されません。返金やキャンセルについてはAppleのポリシーに従います。" data-en="Pro version purchases are processed through Apple's App Store payment system. Billing information is managed by Apple and is not stored in our app. Refunds and cancellations follow Apple's policies.">
+                    Pro版の購入はAppleのApp Store決済システムを通じて行われます。課金情報はAppleが管理し、当アプリには保存されません。返金やキャンセルについてはAppleのポリシーに従います。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="セキュリティについて" data-en="Security">セキュリティについて</h3>
+                <p class="faq-answer" data-ja="すべてのデータは端末内で暗号化されて保存され、ネットワーク通信は一切行わない設計です。iOSのサンドボックス機能により他のアプリからのアクセスを防止し、App GroupsによりメインアプリとWidget間でのみデータ共有を行います。" data-en="All data is encrypted and stored on your device with no network communication. iOS sandbox features prevent access from other apps, and App Groups enable data sharing only between the main app and widgets.">
+                    すべてのデータは端末内で暗号化されて保存され、ネットワーク通信は一切行わない設計です。iOSのサンドボックス機能により他のアプリからのアクセスを防止し、App GroupsによりメインアプリとWidget間でのみデータ共有を行います。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="子供のプライバシーについて" data-en="Children's Privacy">子供のプライバシーについて</h3>
+                <p class="faq-answer" data-ja="あと何日は13歳未満の子供を含む、すべての年齢層で安全に使用できます。個人情報を一切収集しないため、年齢に関係なく安全で、COPPA（児童オンラインプライバシー保護法）に準拠しています。" data-en="Days Left is safe for all ages, including children under 13. Since we don't collect any personal information, it's safe regardless of age and complies with COPPA (Children's Online Privacy Protection Act).">
+                    あと何日は13歳未満の子供を含む、すべての年齢層で安全に使用できます。個人情報を一切収集しないため、年齢に関係なく安全で、COPPA（児童オンラインプライバシー保護法）に準拠しています。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="データの保持と削除について" data-en="Data Retention and Deletion">データの保持と削除について</h3>
+                <p class="faq-answer" data-ja="アプリを削除すると、すべてのデータが完全に削除されます。データの復元はできません（バックアップを行っていないため）。Pro版購入情報のみAppleのシステムに記録されます。" data-en="When you delete the app, all data is completely removed. Data cannot be recovered (because we don't perform backups). Only Pro version purchase information is recorded in Apple's system.">
+                    アプリを削除すると、すべてのデータが完全に削除されます。データの復元はできません（バックアップを行っていないため）。Pro版購入情報のみAppleのシステムに記録されます。
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question" data-ja="法的事項" data-en="Legal Matters">法的事項</h3>
+                <p class="faq-answer" data-ja="このプライバシーポリシーは日本の個人情報保護法、GDPR（EU一般データ保護規則）、CCPA（カリフォルニア州消費者プライバシー法）、COPPA（児童オンラインプライバシー保護法）に準拠しています。あと何日はデータを収集しないため、これらの法規制の対象外ですが、より高い基準でプライバシーを保護しています。" data-en="This privacy policy complies with Japan's Personal Information Protection Act, GDPR (General Data Protection Regulation), CCPA (California Consumer Privacy Act), and COPPA (Children's Online Privacy Protection Act). While Days Left is exempt from these regulations due to not collecting data, we maintain higher privacy protection standards.">
+                    このプライバシーポリシーは日本の個人情報保護法、GDPR（EU一般データ保護規則）、CCPA（カリフォルニア州消費者プライバシー法）、COPPA（児童オンラインプライバシー保護法）に準拠しています。あと何日はデータを収集しないため、これらの法規制の対象外ですが、より高い基準でプライバシーを保護しています。
+                </p>
+            </div>
+
+            <p style="text-align: center; margin-top: 30px; font-size: 0.9em; color: #666;" data-ja="最終更新日: 2024年1月" data-en="Last updated: January 2024">最終更新日: 2024年1月</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p data-ja="© 2024 あと何日. All rights reserved." data-en="© 2024 Days Left. All rights reserved.">© 2024 あと何日. All rights reserved.</p>
+        <p data-ja="iPhone、iOS、WidgetKitはApple Inc.の商標です。" data-en="iPhone, iOS, and WidgetKit are trademarks of Apple Inc.">iPhone、iOS、WidgetKitはApple Inc.の商標です。</p>
+    </div>
+
+    <script>
+        // Language switching functionality
+        const currentLang = localStorage.getItem('days-left-lang') || 'ja';
+        
+        function switchLanguage(lang) {
+            localStorage.setItem('days-left-lang', lang);
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-ja][data-en]').forEach(element => {
+                if (lang === 'ja') {
+                    if (element.tagName === 'TITLE') {
+                        document.title = element.getAttribute('data-ja');
+                    } else if (element.tagName === 'META' && element.name === 'description') {
+                        element.content = element.getAttribute('data-ja');
+                    } else {
+                        element.textContent = element.getAttribute('data-ja');
+                    }
+                } else {
+                    if (element.tagName === 'TITLE') {
+                        document.title = element.getAttribute('data-en');
+                    } else if (element.tagName === 'META' && element.name === 'description') {
+                        element.content = element.getAttribute('data-en');
+                    } else {
+                        element.textContent = element.getAttribute('data-en');
+                    }
+                }
+            });
+            
+            // Update document language
+            document.documentElement.lang = lang;
+            
+            // Update active language style
+            document.getElementById('lang-ja').style.color = lang === 'ja' ? '#007AFF' : '#999';
+            document.getElementById('lang-en').style.color = lang === 'en' ? '#007AFF' : '#999';
+            
+            // Update email subject
+            const emailLink = document.querySelector('.contact-email');
+            if (emailLink) {
+                const subject = lang === 'ja' ? 'あと何日%20サポート' : 'Days%20Left%20Support';
+                emailLink.href = `mailto:nekomura@liz-aria.com?subject=${subject}`;
+            }
+        }
+        
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>

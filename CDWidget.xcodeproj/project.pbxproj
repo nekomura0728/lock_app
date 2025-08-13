@@ -1,0 +1,773 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14D37CF62E4C268000CE98A7 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D37CF52E4C268000CE98A7 /* WidgetKit.framework */; };
+		14D37CF82E4C268000CE98A7 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D37CF72E4C268000CE98A7 /* SwiftUI.framework */; };
+		14D37D082E4C268200CE98A7 /* CDWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 14D37CF32E4C268000CE98A7 /* CDWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14D37C7B2E4C20E900CE98A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D37C622E4C20E700CE98A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D37C692E4C20E700CE98A7;
+			remoteInfo = CDWidget;
+		};
+		14D37C852E4C20E900CE98A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D37C622E4C20E700CE98A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D37C692E4C20E700CE98A7;
+			remoteInfo = CDWidget;
+		};
+		14D37D052E4C268200CE98A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14D37C622E4C20E700CE98A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14D37CF22E4C268000CE98A7;
+			remoteInfo = CDWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14D37D072E4C268200CE98A7 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				14D37D082E4C268200CE98A7 /* CDWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14D37C6A2E4C20E700CE98A7 /* CDWidget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CDWidget.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D37C7A2E4C20E900CE98A7 /* CDWidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDWidgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D37C842E4C20E900CE98A7 /* CDWidgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDWidgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D37CF32E4C268000CE98A7 /* CDWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CDWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		14D37CF52E4C268000CE98A7 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		14D37CF72E4C268000CE98A7 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		14D37D2B2E4C2AC500CE98A7 /* CDWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CDWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		14D37CEE2E4C24B500CE98A7 /* Exceptions for "CDWidget" folder in "CDWidget" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 14D37C692E4C20E700CE98A7 /* CDWidget */;
+		};
+		14D37D0C2E4C268200CE98A7 /* Exceptions for "CDWidgetExtension" folder in "CDWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 14D37CF22E4C268000CE98A7 /* CDWidgetExtensionExtension */;
+		};
+		14D37D252E4C273600CE98A7 /* Exceptions for "CDWidget" folder in "CDWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Models/AppSettings.swift,
+				Models/DataManager.swift,
+				Models/Event.swift,
+				Models/EventManager.swift,
+				"Shared/Extensions/Color+Extensions.swift",
+				"Shared/Extensions/Date+Extensions.swift",
+				Utils/CountdownFormatter.swift,
+			);
+			target = 14D37CF22E4C268000CE98A7 /* CDWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		14D37C6C2E4C20E700CE98A7 /* CDWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				14D37CEE2E4C24B500CE98A7 /* Exceptions for "CDWidget" folder in "CDWidget" target */,
+				14D37D252E4C273600CE98A7 /* Exceptions for "CDWidget" folder in "CDWidgetExtensionExtension" target */,
+			);
+			path = CDWidget;
+			sourceTree = "<group>";
+		};
+		14D37C7D2E4C20E900CE98A7 /* CDWidgetTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CDWidgetTests;
+			sourceTree = "<group>";
+		};
+		14D37C872E4C20E900CE98A7 /* CDWidgetUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = CDWidgetUITests;
+			sourceTree = "<group>";
+		};
+		14D37CF92E4C268000CE98A7 /* CDWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				14D37D0C2E4C268200CE98A7 /* Exceptions for "CDWidgetExtension" folder in "CDWidgetExtensionExtension" target */,
+			);
+			path = CDWidgetExtension;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14D37C672E4C20E700CE98A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C772E4C20E900CE98A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C812E4C20E900CE98A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37CF02E4C268000CE98A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D37CF82E4C268000CE98A7 /* SwiftUI.framework in Frameworks */,
+				14D37CF62E4C268000CE98A7 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14D37C612E4C20E700CE98A7 = {
+			isa = PBXGroup;
+			children = (
+				14D37D2B2E4C2AC500CE98A7 /* CDWidgetExtensionExtension.entitlements */,
+				14D37C6C2E4C20E700CE98A7 /* CDWidget */,
+				14D37C7D2E4C20E900CE98A7 /* CDWidgetTests */,
+				14D37C872E4C20E900CE98A7 /* CDWidgetUITests */,
+				14D37CF92E4C268000CE98A7 /* CDWidgetExtension */,
+				14D37CF42E4C268000CE98A7 /* Frameworks */,
+				14D37C6B2E4C20E700CE98A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14D37C6B2E4C20E700CE98A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14D37C6A2E4C20E700CE98A7 /* CDWidget.app */,
+				14D37C7A2E4C20E900CE98A7 /* CDWidgetTests.xctest */,
+				14D37C842E4C20E900CE98A7 /* CDWidgetUITests.xctest */,
+				14D37CF32E4C268000CE98A7 /* CDWidgetExtensionExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14D37CF42E4C268000CE98A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14D37CF52E4C268000CE98A7 /* WidgetKit.framework */,
+				14D37CF72E4C268000CE98A7 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14D37C692E4C20E700CE98A7 /* CDWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D37C8E2E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidget" */;
+			buildPhases = (
+				14D37C662E4C20E700CE98A7 /* Sources */,
+				14D37C672E4C20E700CE98A7 /* Frameworks */,
+				14D37C682E4C20E700CE98A7 /* Resources */,
+				14D37D072E4C268200CE98A7 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D37D062E4C268200CE98A7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				14D37C6C2E4C20E700CE98A7 /* CDWidget */,
+			);
+			name = CDWidget;
+			packageProductDependencies = (
+			);
+			productName = CDWidget;
+			productReference = 14D37C6A2E4C20E700CE98A7 /* CDWidget.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14D37C792E4C20E900CE98A7 /* CDWidgetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D37C912E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetTests" */;
+			buildPhases = (
+				14D37C762E4C20E900CE98A7 /* Sources */,
+				14D37C772E4C20E900CE98A7 /* Frameworks */,
+				14D37C782E4C20E900CE98A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D37C7C2E4C20E900CE98A7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				14D37C7D2E4C20E900CE98A7 /* CDWidgetTests */,
+			);
+			name = CDWidgetTests;
+			packageProductDependencies = (
+			);
+			productName = CDWidgetTests;
+			productReference = 14D37C7A2E4C20E900CE98A7 /* CDWidgetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14D37C832E4C20E900CE98A7 /* CDWidgetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D37C942E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetUITests" */;
+			buildPhases = (
+				14D37C802E4C20E900CE98A7 /* Sources */,
+				14D37C812E4C20E900CE98A7 /* Frameworks */,
+				14D37C822E4C20E900CE98A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14D37C862E4C20E900CE98A7 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				14D37C872E4C20E900CE98A7 /* CDWidgetUITests */,
+			);
+			name = CDWidgetUITests;
+			packageProductDependencies = (
+			);
+			productName = CDWidgetUITests;
+			productReference = 14D37C842E4C20E900CE98A7 /* CDWidgetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		14D37CF22E4C268000CE98A7 /* CDWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14D37D092E4C268200CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetExtensionExtension" */;
+			buildPhases = (
+				14D37CEF2E4C268000CE98A7 /* Sources */,
+				14D37CF02E4C268000CE98A7 /* Frameworks */,
+				14D37CF12E4C268000CE98A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				14D37CF92E4C268000CE98A7 /* CDWidgetExtension */,
+			);
+			name = CDWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = CDWidgetExtensionExtension;
+			productReference = 14D37CF32E4C268000CE98A7 /* CDWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14D37C622E4C20E700CE98A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					14D37C692E4C20E700CE98A7 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					14D37C792E4C20E900CE98A7 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 14D37C692E4C20E700CE98A7;
+					};
+					14D37C832E4C20E900CE98A7 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 14D37C692E4C20E700CE98A7;
+					};
+					14D37CF22E4C268000CE98A7 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+				};
+			};
+			buildConfigurationList = 14D37C652E4C20E700CE98A7 /* Build configuration list for PBXProject "CDWidget" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 14D37C612E4C20E700CE98A7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 14D37C6B2E4C20E700CE98A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14D37C692E4C20E700CE98A7 /* CDWidget */,
+				14D37C792E4C20E900CE98A7 /* CDWidgetTests */,
+				14D37C832E4C20E900CE98A7 /* CDWidgetUITests */,
+				14D37CF22E4C268000CE98A7 /* CDWidgetExtensionExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14D37C682E4C20E700CE98A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C782E4C20E900CE98A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C822E4C20E900CE98A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37CF12E4C268000CE98A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14D37C662E4C20E700CE98A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C762E4C20E900CE98A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37C802E4C20E900CE98A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14D37CEF2E4C268000CE98A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14D37C7C2E4C20E900CE98A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D37C692E4C20E700CE98A7 /* CDWidget */;
+			targetProxy = 14D37C7B2E4C20E900CE98A7 /* PBXContainerItemProxy */;
+		};
+		14D37C862E4C20E900CE98A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D37C692E4C20E700CE98A7 /* CDWidget */;
+			targetProxy = 14D37C852E4C20E900CE98A7 /* PBXContainerItemProxy */;
+		};
+		14D37D062E4C268200CE98A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14D37CF22E4C268000CE98A7 /* CDWidgetExtensionExtension */;
+			targetProxy = 14D37D052E4C268200CE98A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		14D37C8C2E4C20E900CE98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14D37C8D2E4C20E900CE98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14D37C8F2E4C20E900CE98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CDWidget/CDWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CDWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14D37C902E4C20E900CE98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CDWidget/CDWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CDWidget/Preview Content\"";
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14D37C922E4C20E900CE98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDWidget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CDWidget";
+			};
+			name = Debug;
+		};
+		14D37C932E4C20E900CE98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidgetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CDWidget.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CDWidget";
+			};
+			name = Release;
+		};
+		14D37C952E4C20E900CE98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidgetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CDWidget;
+			};
+			name = Debug;
+		};
+		14D37C962E4C20E900CE98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidgetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CDWidget;
+			};
+			name = Release;
+		};
+		14D37D0A2E4C268200CE98A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CDWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CDWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CDWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidget.CDWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14D37D0B2E4C268200CE98A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CDWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RVU4KGDM65;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CDWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CDWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lizaria.countdown.CDWidget.CDWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14D37C652E4C20E700CE98A7 /* Build configuration list for PBXProject "CDWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D37C8C2E4C20E900CE98A7 /* Debug */,
+				14D37C8D2E4C20E900CE98A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D37C8E2E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D37C8F2E4C20E900CE98A7 /* Debug */,
+				14D37C902E4C20E900CE98A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D37C912E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D37C922E4C20E900CE98A7 /* Debug */,
+				14D37C932E4C20E900CE98A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D37C942E4C20E900CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D37C952E4C20E900CE98A7 /* Debug */,
+				14D37C962E4C20E900CE98A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14D37D092E4C268200CE98A7 /* Build configuration list for PBXNativeTarget "CDWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14D37D0A2E4C268200CE98A7 /* Debug */,
+				14D37D0B2E4C268200CE98A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14D37C622E4C20E700CE98A7 /* Project object */;
+}

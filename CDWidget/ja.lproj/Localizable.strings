@@ -1,0 +1,125 @@
+/* Event List */
+"Events" = "イベント";
+"Settings" = "設定";
+"Add Event" = "イベントを追加";
+"Loading..." = "読み込み中...";
+"No events yet" = "イベントがありません";
+"Create your first event" = "最初のイベントを作成";
+"How to add widgets" = "ウィジェットの追加方法";
+"Add your widget to home screen to see countdown" = "まずはウィジェットを置いて、残り日数をホームで見よう。";
+
+/* Event Edit */
+"New Event" = "新しいイベント";
+"Edit Event" = "イベントを編集";
+"Event Title" = "イベントタイトル";
+"Enter title..." = "タイトルを入力...";
+"Date & Time" = "日時";
+"All Day" = "終日";
+"Color" = "色";
+"Emoji" = "絵文字";
+"Save" = "保存";
+"Cancel" = "キャンセル";
+"Delete" = "削除";
+
+/* Countdown */
+"remaining %d days" = "残り%d日";
+"remaining %d hours" = "残り%d時間";
+"remaining %d minutes" = "残り%d分";
+"remaining %d seconds" = "残り%d秒";
+"completed" = "完了";
+"elapsed %d days" = "経過%d日";
+"elapsed %d hours" = "経過%d時間";
+
+/* Settings */
+"General" = "一般";
+"Notifications" = "通知";
+"Event Management" = "イベント管理";
+"Post Due Display" = "期限後表示";
+"Auto Selection" = "自動選択";
+"Help" = "ヘルプ";
+"Widget Guide" = "ウィジェット追加ガイド";
+"Terms of Service" = "利用規約";
+"Privacy Policy" = "プライバシーポリシー";
+"Version" = "バージョン";
+"Done" = "完了";
+
+/* Pro/Paywall */
+"Pro" = "Pro";
+"Free Version" = "無料版";
+"Up to 1 event" = "1件まで作成可能";
+"All features available" = "すべての機能をご利用いただけます";
+"Upgrade to Pro" = "Proにアップグレード";
+"Restore Purchase" = "購入を復元";
+"Multiple Events" = "複数イベント登録";
+"Create 2 or more events" = "2つ以上のイベントを登録可能";
+"Widget Dual Display" = "ウィジェットで2つ表示";
+"Show multiple events on home screen" = "ホーム画面で複数イベント同時表示";
+"One-time Purchase" = "シンプルな買い切り";
+"Use forever with single purchase" = "一度の購入でずっと使える";
+"Purchase Pro for %@" = "%@でProを購入";
+"Purchase Pro" = "Proを購入";
+"One-time purchase (forever)" = "買い切り（一度だけ）";
+"Pay once, use forever. Charged to your iTunes account." = "一度の購入でずっと使えます。購入はiTunesアカウントに請求されます。";
+
+/* Notifications */
+"Notification Settings" = "通知設定";
+"Allow notifications to receive event reminders." = "イベントの通知を受け取るには、通知を許可してください。";
+"Notification Status" = "通知の状態";
+"Notifications enabled" = "通知が許可されています";
+"Notifications denied" = "通知が拒否されています";
+"Authorization required" = "通知許可が必要です";
+"Allow" = "許可";
+"Notification Timing" = "通知タイミング";
+"We send optimal notifications based on event type." = "イベントの種類に応じて最適なタイミングで通知をお送りします。";
+"1 day before" = "1日前通知";
+"1 hour before" = "1時間前通知";
+"Morning notification" = "当日朝の通知";
+"Time-specific events only" = "時間指定イベントのみ";
+"All-day events only" = "終日イベントのみ";
+"Test Notification" = "通知テスト";
+"Sends test notification in 5 seconds." = "テスト通知を5秒後に送信します。";
+
+/* Widget Guide */
+"How to Add Widgets" = "ウィジェット追加方法";
+"Long press home screen" = "ホーム画面を長押し";
+"Long press until app icons start wiggling." = "アプリアイコンが震え始めるまで長押ししてください。";
+"Tap '+' button" = "「+」ボタンをタップ";
+"Tap the '+' button in top-left corner." = "画面左上の「+」ボタンをタップします。";
+"Search for 'CDWidget'" = "「CDWidget」を検索";
+"Select 'CDWidget' from widget list." = "ウィジェット一覧から「CDWidget」を選択します。";
+"Choose size" = "サイズを選択";
+"Select your preferred size: Small, Medium, or Large." = "Small、Medium、Largeから好きなサイズを選択してください。";
+"Add Widget" = "ウィジェットを追加";
+"Tap 'Add Widget' to complete." = "「ウィジェットを追加」をタップして完了です。";
+
+/* Errors */
+"Error" = "エラー";
+"OK" = "OK";
+"Free version allows up to 1 event. Please upgrade to Pro." = "無料版では1件まで作成できます。Proにアップグレードしてください。";
+"Event not found" = "イベントが見つかりません";
+"Failed to duplicate event" = "複製するイベントが見つかりません";
+"Product not found" = "商品が見つかりません";
+"Purchase failed: %@" = "購入に失敗しました: %@";
+"Restore failed: %@" = "購入の復元に失敗しました: %@";
+
+/* Widget */
+"No events" = "イベントなし";
+"Please create an event" = "イベントを作成してください";
+
+/* Notification Content */
+"Tomorrow is your event!" = "明日はイベントです！";
+"%@ %@ is tomorrow" = "%@ %@ が明日に迫っています";
+"Event starting soon!" = "もうすぐイベントです！";
+"%@ %@ starts in 1 hour" = "%@ %@ が1時間後に開始されます";
+"Today is your event!" = "今日はイベントです！";
+"Today is %@ %@" = "%@ %@ の日です";
+"CDWidget Test Notification" = "CDWidget テスト通知";
+"Notifications are working properly!" = "通知が正常に動作しています！";
+
+/* Post Due Display Policies */
+"Completed" = "完了";
+"Show Elapsed" = "経過時間表示";
+
+/* Widget Select Policies */
+"Nearest" = "最近接";
+"Manual" = "手動";
