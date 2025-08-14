@@ -45,12 +45,12 @@ struct SmallWidgetView: View {
             singleEventView(event: entry.events[0])
         } else {
             // 2イベントの場合は上下に分割
-            VStack(spacing: 4) {
+            VStack(spacing: 2) {
                 ForEach(entry.events.prefix(2), id: \.id) { event in
                     compactEventView(event: event)
                 }
             }
-            .padding(3)
+            .padding(2)
         }
     }
     
@@ -91,28 +91,29 @@ struct SmallWidgetView: View {
     }
     
     private func compactEventView(event: Event) -> some View {
-        HStack(spacing: 8) {
-            Text(event.emoji ?? "📅")
-                .font(.title3)
-            
+        HStack(spacing: 6) {
             VStack(alignment: .leading, spacing: 0) {
                 Text(event.title)
                     .font(.caption2)
-                    .fontWeight(.medium)
+                    .fontWeight(.semibold)
                     .lineLimit(1)
                 
                 Text(entry.countdown(for: event))
                     .font(.system(size: 14, weight: .bold))
                     .foregroundColor(entry.eventColor(for: event).color)
+                    .lineLimit(1)
             }
             
             Spacer()
+            
+            Text(event.emoji ?? "📅")
+                .font(.caption)
         }
-        .padding(.vertical, 4)
-        .padding(.horizontal, 4)
+        .padding(.vertical, 3)
+        .padding(.horizontal, 6)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: 8)
                 .fill(entry.eventColor(for: event).color.opacity(0.1))
         )
     }
@@ -144,12 +145,12 @@ struct MediumWidgetView: View {
             singleEventDetailView(event: entry.events[0])
         } else {
             // 2イベントの場合は左右に分割
-            HStack(spacing: 3) {
+            HStack(spacing: 2) {
                 ForEach(entry.events.prefix(2), id: \.id) { event in
                     mediumEventView(event: event)
                 }
             }
-            .padding(4)
+            .padding(3)
         }
     }
     
@@ -193,22 +194,21 @@ struct MediumWidgetView: View {
     }
     
     private func mediumEventView(event: Event) -> some View {
-        VStack(alignment: .leading, spacing: 3) {
+        VStack(alignment: .leading, spacing: 2) {
             HStack {
-                Text(event.emoji ?? "📅")
-                    .font(.title2)
+                Text(event.title)
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .lineLimit(1)
                 Spacer()
+                Text(event.emoji ?? "📅")
+                    .font(.caption)
             }
             
             Text(entry.countdown(for: event))
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 18, weight: .bold))
                 .foregroundColor(entry.eventColor(for: event).color)
                 .minimumScaleFactor(0.6)
-                .lineLimit(1)
-            
-            Text(event.title)
-                .font(.caption)
-                .fontWeight(.semibold)
                 .lineLimit(1)
             
             Spacer()
@@ -220,7 +220,7 @@ struct MediumWidgetView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding(6)
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: 10)
                 .fill(entry.eventColor(for: event).color.opacity(0.1))
         )
     }
@@ -255,8 +255,24 @@ struct InlineWidgetView: View {
     let entry: CountDownEntry
     
     var body: some View {
-        Text(entry.inlineText)
+        if let event = entry.event {
+            HStack(spacing: 4) {
+                Text(event.title)
+                    .font(.caption)
+                    .fontWeight(.medium)
+                    .lineLimit(1)
+                
+                Text(entry.countdown)
+                    .font(.caption)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+            }
             .widgetURL(widgetURL)
+        } else {
+            Text("イベントなし")
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
     }
     
     private var widgetURL: URL? {
@@ -282,14 +298,18 @@ struct CircularWidgetView: View {
                     .rotationEffect(.degrees(-90))
                 
                 // 中央のテキスト
-                VStack(spacing: 2) {
-                    Text(event.emoji ?? "📅")
-                        .font(.caption)
-                    
+                VStack(spacing: 1) {
                     Text(countdownNumber)
-                        .font(.caption2)
+                        .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(entry.eventColor.color)
+                        .lineLimit(1)
+                    
+                    Text(event.title)
+                        .font(.system(size: 8))
+                        .fontWeight(.medium)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
             } else {
                 Image(systemName: "calendar")
@@ -340,22 +360,23 @@ struct RectangularWidgetView: View {
     var body: some View {
         Group {
             if let event = entry.event {
-                HStack(spacing: 4) {
-                    Text(event.emoji ?? "📅")
-                        .font(.title2)
-                    
-                    VStack(alignment: .leading, spacing: 0) {
+                HStack(spacing: 6) {
+                    VStack(alignment: .leading, spacing: 1) {
                         Text(event.title)
                             .font(.caption)
-                            .fontWeight(.medium)
+                            .fontWeight(.semibold)
                             .lineLimit(1)
                         
                         Text(entry.countdown)
-                            .font(.system(size: 24, weight: .bold))
+                            .font(.title3)
+                            .fontWeight(.bold)
                             .foregroundColor(entry.eventColor.color)
                     }
                     
                     Spacer()
+                    
+                    Text(event.emoji ?? "📅")
+                        .font(.caption)
                 }
             } else {
                 HStack {
